@@ -20,14 +20,14 @@
     {{/each}}
   </ul>
 
-  <div>
-    {{#if hasPrevPage}}
-      <a href="{{prevLink}}">Previous</a>
-    {{/if}}
-    {{#if hasNextPage}}
-      <a href="{{nextLink}}">Next</a>
-    {{/if}}
-  </div>
+		<div>
+			{{#if hasPrevPage}}
+				<a href="{{prevLink}}">Previous</a>
+			{{/if}}
+			{{#if hasNextPage}}
+				<a href="{{nextLink}}">Next</a>
+			{{/if}}
+		</div>
 
   <form action="/logout" method="post">
     <button type="submit">Logout</button>

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const urlDb =
-  process.env.MONGO_URI || "mongodb+srv://valebutrico:wwEb3KHzRJKd3RLW@e-commerce.cf53dma.mongodb.net/ecommerce";
+  process.env.MONGO_URI || "";
 
 export const connectMongoDB = async () => {
   try {
