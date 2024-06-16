@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+</head>
+<body>
+  <h1>Products</h1>
+  <p>Bienvenido, {{username}} ({{role}})</p>
+  <ul>
+    {{#each products}}
+    <li>
+      <h2>{{this.name}}</h2>
+      <p>Price: {{this.price}}</p>
+      <p>Category: {{this.category}}</p>
+      <p>Available: {{this.available}}</p>
+      <button>Add to cart</button>
+    </li>
+    {{/each}}
+  </ul>
+
+  <div>
+    {{#if hasPrevPage}}
+      <a href="{{prevLink}}">Previous</a>
+    {{/if}}
+    {{#if hasNextPage}}
+      <a href="{{nextLink}}">Next</a>
+    {{/if}}
+  </div>
+
+  <form action="/logout" method="post">
+    <button type="submit">Logout</button>
+  </form>
+</body>
+</html>
